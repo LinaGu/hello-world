@@ -1,0 +1,129 @@
+html, body {
+    font-size: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh; 
+}
+
+.top {
+    width: 100vw;
+    height: 1.5em;
+    text-align: center;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+    color: white;
+}
+
+.top-left {
+    width: calc(75% - 0.2em);
+    margin-right: 0.2em;
+    float: left;
+    text-align: center;
+    background-color: gray;
+}
+
+.top-right {
+    width: 25%;
+    float: right;
+    background-color: gray;
+}
+
+.center {
+   display: inline-block;
+   width: 100%;
+   height: calc(100% - 2 * 1.5em - 2 * 0.2em - 1%);  
+}
+
+.center-left {
+    width: 15%;
+    height: 100%;
+    overflow: scroll;
+    display: inline-block;
+    background-image: url("https://filmux.org/uploads/posts/2016-08/thumbs/1470566979_alice_in_wonderland_ver6.jpg");
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: center;
+    color: darkred; 
+    text-align: justify;
+}
+
+.center-center {
+    width: calc(100% - 15% - 25% - 2 * 0.2em);
+    height: calc(100% - 2 * 0.2em);
+    display: inline-block;
+}
+
+.c1 {
+    overflow: hidden;
+    height: 10%;
+    background-image: url("https://image.freepik.com/free-vector/polygonal-blue-background-with-lights_1035-6712.jpg");
+}
+
+.c2 {
+    overflow: hidden;
+    height: 40%;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+    background-image: url("http://www.fondosni.com/bulkupload/imagenes-chistosas/Chistosos/Olas%20Tiburon_800.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.c3 {
+    overflow: scroll;
+    height: calc(50% - 0em);
+    color: white;
+    background-image: url("http://armavir.ucoz.ro/_nw/0/53875218.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: justify;
+}
+
+.center-right {
+    width: 24%;
+    height: calc(100% - 0em);
+    margin-right: 0;
+    display: inline-block;
+}
+
+.c4 {
+    overflow: hidden;
+    height: 30%;
+    color: darkred;
+    margin-bottom: 0em;
+    background-image: url("https://img.elcomercio.pe/files/ec_article_multimedia_gallery/uploads/2017/03/21/58d1ed5088f1c.jpeg");
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.c5 {
+    overflow: scroll;
+    height: calc(70% - 0.2em);
+    margin-top: 0.2em;
+    color: wheat;
+    background-image: url("http://buvaukine.lt/wp-content/uploads/2014/11/EXODUS_B1-235x310.jpg?x63146");
+    background-size: 100%; 
+    background-repeat: no-repeat;
+    text-align: justify;
+}
+
+
+.bottom {
+    background-color: gray;
+    color: darkblue;
+    width: 100vw;
+    height: 1.5em;
+    text-align: center;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+}
