@@ -1,0 +1,116 @@
+html, body {
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+.conteiner {
+    background-color: yellowgreen;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+table {
+    position: relative;
+    display: block;
+}
+tbody, td {
+    border: none;
+}
+tbody {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+td {
+    width: 4em; height: 4em;
+    position: relative;
+    display: table-cell; 
+    align-items: center;
+    justify-content: center;
+}
+p {
+    text-align: right;
+}
+td.stilius1 {
+    background-color: rgb(100, 200, 200);
+}
+td.stilius2 {
+    background-color: rgb(150, 15, 100);
+}
+tfoot {
+    text-align: center;
+    vertical-align: top;
+}
+div {
+    font-size: 120%;
+}  
+span {
+    font-size: 300%;
+    position: relative;
+    left: 10%;
+}
+#steps {
+    display: inline-block;
+    position: absolute;
+    width: 20%;
+    height: 33em;
+    background-color: darkgrey;
+    left: 80%;
+    bottom: 10%;
+    font-size: 100%;
+    overflow: scroll;
+}
+#steps div {
+    display: inline-block;
+    font-size: 90%;
+    padding: 0.5em;
+}
+#jB1::after, #jB2::after {
+    color: black;
+    content: "\265C";
+}
+#jZ1::after, #jZ2::after {
+    color: black;
+    content: "\265E";
+}
+#jR1::after, #jR2::after {
+    color: black;
+    content: "\265D";
+}
+#jQ::after {
+    color: black;
+    content: "\265B";
+}
+#jKar::after {
+    color: black;
+    content: "\265A";
+}
+#jP1::after, #jP2::after, #jP3::after, #jP4::after, #jP5::after, #jP6::after, #jP7::after, #jP8::after {
+    color: black;
+    content: "\265F";
+}
+#bP1::after, #bP2::after, #bP3::after, #bP4::after, #bP5::after, #bP6::after, #bP7::after, #bP8::after {
+    color: white;
+    content: "\265F";
+}
+#bB1::after, #bB2:after {
+    color: white;
+    content: "\265C";
+}
+#bZ1::after, #bZ2::after {
+    color: white;
+    content: "\265E";
+}
+#bR1::after, #bR2::after {
+    color: white;
+    content: "\265D";
+}
+#bQ::after {
+    color: white;
+    content: "\265B";
+}
+#bKar::after {
+    color: white;
+    content: "\265A";
+}
