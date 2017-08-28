@@ -1,95 +1,79 @@
 html,
 body {
-    font-size: 120%;
-    margin: 0.5em;
-    background-color: lightblue;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
-    width: 44vw;
-    height: 44vw;
-    background-color: black;
-    margin: auto;
+body {
+    background: url("http://images.all-free-download.com/images/graphiclarge/abstract_wave_background_310308.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#forma {
+    display: block;
     position: relative;
-    box-shadow: 20px 20px 10px #888888;
+    top: 30vh;
+    left: 25vw;
+} 
+
+#esamSlp {
+    margin: 2em 0 1em 7em;
+    width: 15%;
+    border-radius: 5%;
 }
 
-.raide {
-    position: relative;
-    top: calc(50% - 0.5em);
+#naujSlp {
+    margin: 0 0 1em 6.5em;
+    width: 15%;
+    border-radius: 5%;
 }
 
-.r,
-.g,
-.b {
-    position: absolute;
-    width: 65%;
-    height: 65%;
-    border-radius: 50%;
-    text-align: center;
+#pakartSlp {
+    margin: 0 0 2em 1.9em;
+    width: 15%;
+    border-radius: 5%;
+}
+
+button {
+    background-color: blueviolet;
     color: white;
-    font-size: 2em;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5%;
+    box-shadow: 0.2em 0.2em black;
+    cursor: pointer;
+    width: 10%;
+    position: relative;
+    float: left;
+    left: 18.5em;
 }
 
-.r {
-    top: 16%;
-    left: 16%;
-    background-color: rgba(255, 0, 0, 0.5);
-    border: 0.2em solid red;
-    animation: judejimasA;
-    animation-delay: 1s;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 2;
-    animation-timing-function: cubic-bezier(.7, 2, .8, .7);
+button:hover {
+    opacity: 0.5;
 }
 
-@keyframes judejimasA {
-    from {}
-    to {
-        top: 0%;
-        right: 16%;
-    }
+div {
+    display: none;
+    position: absolute;
+    right: 30%;
+    width: 30em;
+    height: 5em;
+    padding: 4em 3em 1em 3em;
+    background-color: lightcoral;
+    border: 1px solid black;
+    box-shadow: 1em 1em black;
+    text-align: center;
+    vertical-align: middle;
+    opacity: 0.9;
+    top: 10em;
 }
 
-.g {
-    bottom: 16%;
-    left: 16%;
-    background-color: rgba(0, 255, 0, 0.5);
-    border: 0.2em solid green;
-    animation: judejimasB;
-    animation-delay: 1s;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 2;
-    animation-timing-function: cubic-bezier(.7, 2, .8, .7);
-}
-
-@keyframes judejimasB {
-    from {}
-    to {
-        bottom: 0%;
-        left: 0%;
-    }
-}
-
-.b {
-    bottom: 16%;
-    right: 16%;
-    background-color: rgba(0, 0, 255, 0.5);
-    border: 0.2em solid blue;
-    animation: judejimasC;
-    animation-delay: 1s;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 2;
-    animation-timing-function: cubic-bezier(.7, 2, .8, .7);
-}
-
-@keyframes judejimasC {
-    from {}
-    to {
-        bottom: 0%;
-        right: 0%;
-    }
+.ok {
+    width: 4em;
+    height: 2em;
+    float: right;
 }
