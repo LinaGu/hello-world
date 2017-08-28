@@ -1,0 +1,95 @@
+html,
+body {
+    font-size: 120%;
+    margin: 0.5em;
+    background-color: lightblue;
+}
+
+.container {
+    width: 44vw;
+    height: 44vw;
+    background-color: black;
+    margin: auto;
+    position: relative;
+    box-shadow: 20px 20px 10px #888888;
+}
+
+.raide {
+    position: relative;
+    top: calc(50% - 0.5em);
+}
+
+.r,
+.g,
+.b {
+    position: absolute;
+    width: 65%;
+    height: 65%;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+
+.r {
+    top: 16%;
+    left: 16%;
+    background-color: rgba(255, 0, 0, 0.5);
+    border: 0.2em solid red;
+    animation: judejimasA;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+    animation-timing-function: cubic-bezier(.7, 2, .8, .7);
+}
+
+@keyframes judejimasA {
+    from {}
+    to {
+        top: 0%;
+        right: 16%;
+    }
+}
+
+.g {
+    bottom: 16%;
+    left: 16%;
+    background-color: rgba(0, 255, 0, 0.5);
+    border: 0.2em solid green;
+    animation: judejimasB;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+    animation-timing-function: cubic-bezier(.7, 2, .8, .7);
+}
+
+@keyframes judejimasB {
+    from {}
+    to {
+        bottom: 0%;
+        left: 0%;
+    }
+}
+
+.b {
+    bottom: 16%;
+    right: 16%;
+    background-color: rgba(0, 0, 255, 0.5);
+    border: 0.2em solid blue;
+    animation: judejimasC;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+    animation-timing-function: cubic-bezier(.7, 2, .8, .7);
+}
+
+@keyframes judejimasC {
+    from {}
+    to {
+        bottom: 0%;
+        right: 0%;
+    }
+}
