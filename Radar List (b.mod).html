@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Radar List JQ</title>
+    <title>Bootstrap modal</title>
+    <meta charset="UTF-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <style>
+        html,
+        body {
+            background-color: lavender;
+            width: 100%;
+            max-width: 100vw;
+            max-height: 100vh;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0.5em;
+        }
+
+        th {
+            background-color: #5cb85c;
+            color: white;
+            border-collapse: none;
+        }
+
+        tr,
+        th {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        td {
+            display: table-cell;
+        }
+
+        tr>th:first-child {
+            border-top-left-radius: 25px;
+        }
+
+        tr>th:last-child {
+            border-top-right-radius: 25px;
+        }
+
+        .modal-header {
+            background-color: #5cb85c;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .modal-footer {
+            background-color: #f9f9f9;
+        }
+
+        #pencil,
+        #trash {
+            font-size: 70%;
+            width: 7em;
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#naujas" onclick="mygtukas()"> 
+        Naujas
+    </button>
+    <h2>Automobilių duomenys</h2>
+    <table id="tableAuto" class="table table-bordered">
+        <tr>
+            <th id="tdd">DATA</th>
+            <th id="tdn">Automobilio Numeris</th>
+            <th id="tda">ATSTUMAS (m)</th>
+            <th id="tdl">LAIKAS (s)</th>
+            <th id="tdg">GREITIS (km/val)</th>
+            <th></th>
+        </tr>
+    </table>
+
+    <div class="modal fade" id="entry">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Automobilio duomenų įvedimas</h4>
+                </div>
+                <div class="modal-body" id="tbody">
+                    <div class="form-group">
+                        <label for="data">Data</label>
+                        <input class="form-control" id="data" name="data">
+                        <label for="anr">Automobilio Numeris</label>
+                        <input class="form-control" id="anr" name="anr">
+                        <label for="atstumas">Atstumas (m)</label>
+                        <input class="form-control" id="atstumas" name="atstumas">
+                        <label for="laikas">Laikas (s)</label>
+                        <input class="form-control" id="laikas" name="laikas">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="cancel" onclick="cancel()" type="button" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Atšaukti</button>
+                    <button id="save" type="button" class="btn btn-success btn-default"><span class="glyphicon glyphicon-ok"> Saugoti</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function mygtukas() {
+            $('#naujas').click(function () {
+                $('#entry').modal('hide'), empty();
+            });
+            $('#entry').modal('show');
+        }
+
+        $("#save").click(function () {
+            var d2 = $("#data").val()
+            var n2 = $("#anr").val()
+            var a2 = $("#atstumas").val();
+            var l2 = $("#laikas").val();
+            var g2 = (a2 / l2 * 3.6).toFixed(0);
+            var talg = "<tr><td>" + d2 + "</td><td>" + n2 + "</td><td>" + a2 + "</td><td>" + l2 + "</td><td>" + g2 + "</td><td><button id='pencil' class='btn btn-default btn-xs' onclick='edit()'><span class='glyphicon glyphicon-pencil'> Taisyti</span></button><button id='trash' class='btn btn-default btn-xs'><span class='glyphicon glyphicon-trash'> Trinti</span></button></td></tr>";
+            $("#tableAuto").append(talg);
+            $('#entry').modal('hide');
+        });
+
+        function edit() {
+            $('#pencil').click(function () {
+                $('#entry').modal('hide');
+                talg = "<tr><td>" + d2 + "</td><td>" + n2 + "</td><td>" + a2 + "</td><td>" + l2 + "</td><td>" + g2 + "</td><td><button id='pencil' class='btn btn-default btn-xs' onclick='edit()'><span class='glyphicon glyphicon-pencil'> Taisyti</span></button><button id='trash' class='btn btn-default btn-xs'><span class='glyphicon glyphicon-trash'> Trinti</span></button></td></tr>";
+                $("#tableAuto").append(talg);
+            });
+            $('#entry').modal('show');
+            $('tr:nth-child(2)').empty();
+
+        }
+
+        $('#trash').click(function () {
+            $('tr:nth-child(2)').remove(this);
+        });
+    </script>
+</body>
+
+</html>
